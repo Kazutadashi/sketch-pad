@@ -1,10 +1,12 @@
 function buildBoard() {
     
     for (let i = 0; i<16; i++) {
+        
         let tile = document.createElement('div');
-        document.body.appendChild(tile);
+        tile.className = 'tile';
 
-        console.log('added div');
+        document.querySelector('.board').appendChild(tile);
+
     }
     
 }

@@ -31,12 +31,18 @@ function changeToFlowMode(e){
     console.log(e.target);
 }
 
+function clearBoard(e){
+    tiles.forEach(tile => tile.classList.remove("painted", "flowing"));
+}
+
 buildBoard();
 
 const tiles = document.querySelectorAll(".tile");
 const drawButton = document.querySelector("#draw-button");
 const flowButton = document.querySelector("#flow-button");
+const clearButton = document.querySelector("#clear-button");
 
 flowButton.addEventListener('click', changeToFlowMode);
 drawButton.addEventListener('click', changeToPaintMode);
+clearButton.addEventListener('click', clearBoard);
 

@@ -12,21 +12,21 @@ function buildBoard() {
 }
 
 function paintTile(e){
-    e.target.style.backgroundColor = "black";
-    console.log('i was hovered');
+    e.target.classList.add('painted');
 }
 
 function flowTile(e){
-    e.target.style.transition = "2s";
-    e.target.style.backgroundColor = "black";
+    e.target.classList.add('flowing');
 }
 
 function changeToPaintMode(e){
+    tiles.forEach(tile => tile.removeEventListener('mouseover', flowTile));
     tiles.forEach(tile => tile.addEventListener('mouseover', paintTile));
     console.log(e.target)
 }
 
 function changeToFlowMode(e){
+    tiles.forEach(tile => tile.removeEventListener('mouseover', paintTile));
     tiles.forEach(tile => tile.addEventListener('mouseover', flowTile));
     console.log(e.target);
 }
@@ -39,5 +39,4 @@ const flowButton = document.querySelector("#flow-button");
 
 flowButton.addEventListener('click', changeToFlowMode);
 drawButton.addEventListener('click', changeToPaintMode);
-
 

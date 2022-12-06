@@ -1,5 +1,9 @@
+
+// Create cols*rows amount of tiles, and line them up side by side. 
+// Then using CSS we make them into a grid with display: grid
 function buildBoard(cols, rows) {
     const board = document.querySelector(".board");
+    // Sets the amount of columns and rows needed and sizes them equally
     board.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
     for (let i = 0; i<(cols*rows); i++) {
@@ -13,6 +17,7 @@ function buildBoard(cols, rows) {
     
 }
 
+// Changing classes to change the color
 function paintTile(e){
     e.target.classList.add('painted');
 }

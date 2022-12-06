@@ -42,14 +42,23 @@ function clearBoard(e){
     tiles.forEach(tile => tile.classList.remove("painted", "flowing"));
 }
 
-buildBoard(20, 20);
+function changeBoardSize(){
+    let cols = prompt("How many cols?");
+    let rows = prompt("How many rows?");
+    console.log(cols, rows);
+    buildBoard(parseInt(cols), parseInt(rows))
+}
+
+buildBoard(40, 40);
 
 const tiles = document.querySelectorAll(".tile");
 const drawButton = document.querySelector("#draw-button");
 const flowButton = document.querySelector("#flow-button");
 const clearButton = document.querySelector("#clear-button");
+const changeSizeButton = document.querySelector('#size-button');
 
 flowButton.addEventListener('click', changeToFlowMode);
 drawButton.addEventListener('click', changeToPaintMode);
 clearButton.addEventListener('click', clearBoard);
+changeSizeButton.addEventListener('click', changeBoardSize);
 

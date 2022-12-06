@@ -48,8 +48,16 @@ function changeBoardSize(){
     while(board.firstChild){
         board.removeChild(board.lastChild);
     }
+    
     let cols = prompt("How many cols?");
     let rows = prompt("How many rows?");
+
+    while (!(cols < 100) || !(rows<100)){
+        alert('Too many columns or rows. Please enter again.');
+        cols = prompt("How many columns?");
+        rows = prompt("How many rows?");
+    }
+
     console.log(cols, rows);
     buildBoard(parseInt(cols), parseInt(rows))
 }

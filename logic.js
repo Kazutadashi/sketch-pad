@@ -1,6 +1,8 @@
-function buildBoard() {
-    
-    for (let i = 0; i<256; i++) {
+function buildBoard(cols, rows) {
+    const board = document.querySelector(".board");
+    board.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+    for (let i = 0; i<(cols*rows); i++) {
         
         let tile = document.createElement('div');
         tile.className = 'tile';
@@ -35,7 +37,7 @@ function clearBoard(e){
     tiles.forEach(tile => tile.classList.remove("painted", "flowing"));
 }
 
-buildBoard();
+buildBoard(20, 20);
 
 const tiles = document.querySelectorAll(".tile");
 const drawButton = document.querySelector("#draw-button");

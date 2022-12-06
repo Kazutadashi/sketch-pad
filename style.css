@@ -14,15 +14,15 @@ html {
 
 .board {
     display: grid;
-    height: 600px;
-    width: 600px;
+    height: 650px;
+    width: 650px;
 }
 
 .buttons{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 20px 0px;
-    width: 600px;
+    width: 650px;
 
 }
 
@@ -30,6 +30,14 @@ html {
     flex: 1;
     height: 75px;
     font-size: 20px;
+    border-radius: 6px;
+    height: 48px;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.option-button + .option-button {
+    margin-left: 10px;
 }
 
 .painted {

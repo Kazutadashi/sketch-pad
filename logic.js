@@ -12,9 +12,10 @@ function buildBoard(cols, rows) {
         tile.className = 'tile';
 
         document.querySelector('.board').appendChild(tile);
+        
 
     }
-    
+    tiles = document.querySelectorAll(".tile");
 }
 
 // Changing classes to change the color
@@ -43,15 +44,20 @@ function clearBoard(e){
 }
 
 function changeBoardSize(){
+    const board = document.querySelector(".board");
+    while(board.firstChild){
+        board.removeChild(board.lastChild);
+    }
     let cols = prompt("How many cols?");
     let rows = prompt("How many rows?");
     console.log(cols, rows);
     buildBoard(parseInt(cols), parseInt(rows))
 }
 
-buildBoard(40, 40);
+let tiles = document.querySelectorAll(".tile");
+buildBoard(20, 20);
 
-const tiles = document.querySelectorAll(".tile");
+
 const drawButton = document.querySelector("#draw-button");
 const flowButton = document.querySelector("#flow-button");
 const clearButton = document.querySelector("#clear-button");

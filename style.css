@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(92, 92, 92);
+    background-color: rgb(38, 66, 91);
 }
 
 .game {
@@ -21,20 +21,24 @@ html {
 .buttons{
     display: flex;
     justify-content: space-evenly;
+    margin: 20px 0px;
+    width: 600px;
+
 }
 
 .option-button {
-    width: 300px;
-    height: 100px;
+    flex: 1;
+    height: 75px;
+    font-size: 20px;
 }
 
 .painted {
-    background-color: lightgray;
+    background-color: #d99d2b;
     overflow: hidden;
 }
 
 .flowing {
-    background-color: lightgray;
+    background-color: #d99d2b;
     overflow: hidden;
     transition: 2s;
 }

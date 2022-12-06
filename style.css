@@ -1,9 +1,13 @@
+body {
+    background-color: rgb(92, 92, 92);
+}
+
 .game {
     display: flex;
 }
 
 .tile {
-    border: 1px solid black;
+    border: 1px solid rgb(124, 124, 124);
 }
 
 .board {
@@ -23,12 +27,12 @@
 }
 
 .painted {
-    background-color: black;
+    background-color: rgb(53, 53, 53);
     overflow: hidden;
 }
 
 .flowing {
-    background-color: black;
+    background-color: rgb(53, 53, 53);
     overflow: hidden;
     transition: 2s;
 }

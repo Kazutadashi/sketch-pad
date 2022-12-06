@@ -11,4 +11,13 @@ function buildBoard() {
     
 }
 
+function paintTile(e){
+    e.target.backgroundColor = "black";
+    console.log('i was hovered');
+}
+
 buildBoard();
+
+const tiles = document.querySelectorAll(".tile");
+tiles.forEach(tile => tile.addEventListener('mouseover', paintTile));
+

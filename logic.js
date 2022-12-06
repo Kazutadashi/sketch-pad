@@ -12,7 +12,7 @@ function buildBoard() {
 }
 
 function paintTile(e){
-    e.target.backgroundColor = "black";
+    e.target.style.backgroundColor = "black";
     console.log('i was hovered');
 }
 

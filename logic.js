@@ -31,7 +31,6 @@ function flowTile(e){
         currentTarget.target.classList.remove('flowing');
         currentTarget.target.classList.add('fade-out');
     }, delay);
-    console.log('fade was added, now removing.')
     setTimeout(() => {
         currentTarget.target.classList.remove('fade-out');
     }, 2500);

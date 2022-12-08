@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(38, 66, 91);
+    background-color: rgb(38, 38, 38);
 }
 
 .game {
@@ -48,5 +48,9 @@ html {
 .flowing {
     background-color: #d99d2b;
     overflow: hidden;
-    transition: 2s;
+    transition: 1.5s;
+}
+
+.fade-out {
+    transition: 1.5s;
 }

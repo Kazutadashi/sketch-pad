@@ -24,7 +24,17 @@ function paintTile(e){
 }
 
 function flowTile(e){
-    e.target.classList.add('flowing');
+    let delay = 1000;
+    let currentTarget = e;
+    currentTarget.target.classList.add('flowing');
+    setTimeout(() => {
+        currentTarget.target.classList.remove('flowing');
+        currentTarget.target.classList.add('fade-out');
+    }, delay);
+    console.log('fade was added, now removing.')
+    setTimeout(() => {
+        currentTarget.target.classList.remove('fade-out');
+    }, 2500);
 }
 
 function changeToPaintMode(e){
